@@ -1,0 +1,79 @@
+{
+  "menu": [
+    {
+      "name": "Egresso",
+      "icon": "user-check",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/egresso/inserir",
+          "name": "Inserir",
+          "icon": "corner-down-right",
+          "slug": "create-egresso-admin"
+        },
+        {
+          "url": "admin/egresso/listar",
+          "name": "Consultar",
+          "icon": "corner-down-right",
+          "slug": "index-egresso-admin"
+        }
+      ]
+    },
+    {
+      "name": "Administrador",
+      "icon": "user",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/usuario/inserir",
+          "name": "Inserir",
+          "icon": "corner-down-right",
+          "slug": "create-administrador"
+        },
+        {
+          "url": "admin/usuario/listar",
+          "name": "Consultar",
+          "icon": "corner-down-right",
+          "slug": "index-administrador"
+        }
+      ]
+    },
+    {
+      "name": "Relatório",
+      "icon": "layers",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/relatorio/egresso",
+          "name": "Egresso",
+          "icon": "corner-down-right",
+          "slug": "rel-egresso"
+        },
+        {
+          "url": "admin/relatorio/titulo",
+          "name": "Título",
+          "icon": "corner-down-right",
+          "slug": "rel-titulo"
+        },
+        {
+          "url": "admin/relatorio/area",
+          "name": "Área",
+          "icon": "corner-down-right",
+          "slug": "rel-area"
+        },
+        {
+          "url": "admin/relatorio/cidade",
+          "name": "Cidade",
+          "icon": "corner-down-right",
+          "slug": "rel-cidade"
+        },
+        {
+          "url": "admin/relatorio/ano-formatura",
+          "name": "Ano de Formatura",
+          "icon": "corner-down-right",
+          "slug": "rel-ano-formatura"
+        }
+      ]
+    }
+  ]
+}

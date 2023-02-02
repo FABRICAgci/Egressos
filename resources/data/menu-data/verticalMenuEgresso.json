@@ -1,0 +1,17 @@
+{
+  "menu": [
+    {
+      "name": "Egresso",
+      "icon": "user-check",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "egresso/listar",
+          "name": "Consultar",
+          "icon": "corner-down-right",
+          "slug": "index-egresso"
+        }
+      ]
+    }
+  ]
+}
