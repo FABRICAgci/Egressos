@@ -82,8 +82,8 @@ class UserEgressoAdminController extends Controller
     public function create()
     {
         $breadcrumbs = [['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Inserir Egresso"], ['name' => "Egresso"]];
-        $titulos = Titulo::where('ativo', 1)->orderBy('descricao')->get();
-        $areas = Area::where('ativo', 1)->orderBy('descricao')->get();
+        $titulos = Titulo::where('ativo', 1)->orderBy('id')->get();
+        $areas = Area::where('ativo', 1)->orderBy('id')->get();
         $paises = Countrie::all();
         $ufs = Uf::where('ativo', 1)->orderBy('name')->get();
         return view('/admin/usuario/egresso/inserir-egresso', compact(['breadcrumbs', 'titulos', 'areas', 'paises', 'ufs', ]));
@@ -153,8 +153,8 @@ class UserEgressoAdminController extends Controller
         $breadcrumbs = [['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Editar Egresso"], ['name' => "Egresso"]];
         $egresso = User::find($id);
 
-        $titulos = Titulo::where('ativo', 1)->orderBy('descricao')->get();
-        $areas = Area::where('ativo', 1)->orderBy('descricao')->get();
+        $titulos = Titulo::where('ativo', 1)->orderBy('id')->get();
+        $areas = Area::where('ativo', 1)->orderBy('id')->get();
         $paises = Countrie::all();
         $ufs = Uf::where('ativo', 1)->orderBy('name')->get();
         $cidades_nascimento = Cidade::where('ativo', 1)->where('uf_id', $egresso->uf_nascimento)->orderBy('name')->get();

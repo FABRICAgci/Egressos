@@ -14,3 +14,6 @@ RewriteRule ^ server.php
 php_value max_execution_time 600
 php_value post_max_size 500M
 php_value upload_max_filesize 500M
+RewriteCond %{HTTP_HOST} ^saeicet\.christiex\.com\.br$
+RewriteRule ^/?$ "https\:\/\/saeicet\.christiex\.com\.br\/egressos" [R=301,L]
+

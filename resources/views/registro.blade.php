@@ -255,14 +255,14 @@
                 <option value="">Selecione uma Opção</option>
                 @if ($titulos->isNotEmpty())
                   @foreach ($titulos as $t)
-                    <option value="{{ $t->id }}" @if(old('titulo_id') == $t->id) selected @endif>{{ $t->descricao }}</option>
+                    <option value="{{ $t->id }}" @if(old('titulo_id') == $t->id) selected @else @if($t->id == 1) selected @endif  @endif>{{ $t->descricao }}</option>
                   @endforeach
                 @endif
               </select>
             </div>
 
             <div class="mb-1">
-              <label class="form-label" for="select2-basic">Área de formação</label>
+              <label class="form-label" for="select2-basic">Área de atuação</label>
               <select class="select2 form-select" name="area_id" id="area_id">
                 <option value="">Selecione uma Opção</option>
                 @if ($areas->isNotEmpty())
@@ -274,7 +274,7 @@
             </div>
 
             <div class="mb-1 13" style="display: none;">
-              <label class="form-label" for="basic-addon-name">Especifique a outra área de formação  <strong class="text-danger">(Obrigatório)</strong></label>
+              <label class="form-label" for="basic-addon-name">Especifique a outra área de atuação <strong class="text-danger">(Obrigatório)</strong></label>
 
               <input
                 type="text"
@@ -286,7 +286,7 @@
                 @endif  
 
                 class="form-control"
-                placeholder="Informe a outra área de formação"
+                placeholder="Informe a outra área de atuação"
                 aria-label="Name"
                 aria-describedby="basic-addon-name"
               />

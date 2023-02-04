@@ -73,8 +73,8 @@ class UserEgressoController extends Controller
     public function create()
     {
         $pageConfigs = ['blankPage' => true];
-        $titulos = Titulo::where('ativo', 1)->orderBy('descricao')->get();
-        $areas = Area::where('ativo', 1)->orderBy('descricao')->get();
+        $titulos = Titulo::where('ativo', 1)->orderBy('id')->get();
+        $areas = Area::where('ativo', 1)->orderBy('id')->get();
         $paises = Countrie::all();
         $ufs = Uf::where('ativo', 1)->orderBy('name')->get();
         return view('registro', compact(['pageConfigs', 'titulos', 'areas', 'paises', 'ufs', ]));
